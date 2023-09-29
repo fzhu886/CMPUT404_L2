@@ -17,7 +17,7 @@ def handle_connection(conn, addr):
 
 # Start single threaded echo server
 def start_server():
-    with socket.socket(sockey.AF_INET, socket.SOCK_STREAM) as s: # initialize the socket
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: # initialize the socket
         s.bind((HOST, PORT)) # bind to ip and port
         s.setsockopt(socket.SOL_SOCKET, socket, SO_REUSEADDR, 1) # Ignore this for now => set reuseaddr to 1
         s.listen() # listen for incoming connections
